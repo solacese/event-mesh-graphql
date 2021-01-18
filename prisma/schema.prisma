@@ -1,0 +1,24 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./eventmesh.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model EventMeshClients {
+  clientName    String                   @id
+  clientAddress String
+  nodeName      String
+  userName      String
+  createdAt     DateTime                 @default(now())
+  lastUpdated   DateTime                 @updatedAt
+  subscriptions EventMeshSubscriptions[] @relation(references: [subscription])
+}
+
+model EventMeshSubscriptions {
+  subscription String             @id
+  lastUpdated  DateTime           @updatedAt
+  clients      EventMeshClients[] @relation(references: [clientName])
+}

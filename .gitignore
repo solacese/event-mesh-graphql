@@ -1,0 +1,8 @@
+prisma/migrations
+prisma/*.env
+prisma/*.db
+graphql-server/*.graphql
+graphql-server/generated
+package-lock.json
+node_modules
+event-mesh-collector/event-mesh-nodes-config.ts
