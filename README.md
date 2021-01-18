@@ -52,7 +52,7 @@ Currently, the collector only stores clients/subscription information. The follo
   "data": {
     "findClientsForSubscription": [
       {
-        "subscription": "car/drive",
+        "subscription": "my/topic",
         "clients": [
           {
             "nodeName": "Cloud Broker"
@@ -70,7 +70,7 @@ Currently, the collector only stores clients/subscription information. The follo
 * **Which user and node is my topic subscribed to from?**
   ```
   Query{
-  findClientsForSubscription(topicString: "car/drive"){
+  findClientsForSubscription(topicString: "my/topic"){
     subscription
     clients {
       nodeName
@@ -85,7 +85,7 @@ Currently, the collector only stores clients/subscription information. The follo
   "data": {
     "findClientsForSubscription": [
       {
-        "subscription": "car/drive",
+        "subscription": "my/topic",
         "clients": [
           {
             "nodeName": "Cloud Broker",
